@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Ejercicios de Operaciones Basicas</h1>
+    <button onclick="ej1()">Ejercicio 1</button>
+    <button onclick="ej2()">Ejercicio 2</button>
+    <button onclick="ej3()">Ejercicio 3</button>
+    <button onclick="ej4()">Ejercicio 4</button>
+    <script>
+      function ej1() {
+        var numero1 = prompt("Ingrese el primer número:");
+        var numero2 = prompt("Ingrese el segundo número:");
+
+        numero1 = parseFloat(numero1);
+        numero2 = parseFloat(numero2);
+
+        var resultado = numero1 + numero2;
+
+        alert("La suma de los números es: " + resultado);
+      }
+      function ej2() {
+        const temperaturaCelsius = prompt(
+          "Ingrese la temperatura en grados Celsius:"
+        );
+        const temperaturaFahrenheit = (temperaturaCelsius * 9) / 5 + 32;
+        alert(
+          "La temperatura en grados Fahrenheit es: " + temperaturaFahrenheit
+        );
+      }
+      function ej3() {
+        const numero = prompt("Ingrese un número:");
+        const resultado = numero / 10;
+        alert("El resultado de la división entre 10 es: " + resultado);
+      }
+      function ej4() {
+        const a = [1, 2, 3];
+        alert("El tipo de dato es: " + typeof a);
+      }
+    </script>
+  </body>
+</html>

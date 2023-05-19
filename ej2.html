@@ -6,5 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Ejercicios de if and else</h1>
+    <button onclick="ej1()">Par o Impar</button>
+    <button onclick="ej2()">Divisible entre 5</button>
+    <button onclick="ej3()">Divisible entre 5 y 11</button>
+    <button onclick="ej4()">Cual es mayor</button>
+    <br />
+    <button onclick="ej5()">Con cual empieza</button>
+
+    <script>
+      function ej1() {
+        const num = prompt("Ingrese el primer número:");
+        if (num % 2 === 0) {
+          alert("Es par");
+        } else {
+          alert("Es impar");
+        }
+      }
+      function ej2() {
+        const num = prompt("Ingrese el primer número:");
+        if (num % 5 === 0) {
+          alert("Es divisible entre 5");
+        } else {
+          alert("No es divisible entre 5");
+        }
+      }
+      function ej3() {
+        const num = prompt("Ingrese el primer número:");
+        if (num % 5 === 0 && num % 11 === 0) {
+          alert("Es divisible entre 5 y 11");
+        } else {
+          alert("No es divisible entre 5 y 11");
+        }
+      }
+      function ej4() {
+        const numero1 = parseFloat(prompt("Ingrese el primer número:"));
+        const numero2 = parseFloat(prompt("Ingrese el segundo número:"));
+
+        let mayor;
+
+        if (numero1 > numero2) {
+          mayor = numero1;
+        } else if (numero2 > numero1) {
+          mayor = numero2;
+        } else {
+          alert("Los números son iguales.");
+          return;
+        }
+
+        alert("El número mayor es: " + mayor);
+
+        /*  //Ternario
+        const mayor = numero1 > numero2 ? numero1 : numero2;
+        alert("El número mayor es: " + mayor); */
+      }
+      function ej5() {
+        const string = prompt("Ingrese una cadena:");
+        const primerCaracter = string.charAt(0);
+        let mensaje;
+
+        if (isNaN(primerCaracter)) {
+          mensaje = "El string empieza con una letra.";
+        } else {
+          mensaje = "El string empieza con un número.";
+        }
+
+        alert(mensaje);
+      }
+    </script>
+  </body>
 </html>
